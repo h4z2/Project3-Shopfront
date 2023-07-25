@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles-script\styles.css" />
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <script src="javascript.js"></script>
+    <script src="styles-script\javascript.js" src="styles-script\lightbox.js"></script>
     <div id="window">
       <div id="padding">
         <nav>
@@ -18,11 +18,11 @@
           <a href=women.html><div class="women">Women</div></a>
           <a href=about.html><div class="about">About</div></a>
           <a href=contact.html><div class="about">Contact</div></a>
-          <div id="avatar"><img src="C:\Users\h4z2w\Downloads\ecommerce-product-page-main\images\image-avatar.png" height="45px" width="45px"></div>
-          <div id="cart"><img src="C:\Users\h4z2w\Downloads\ecommerce-product-page-main\images\icon-cart.svg"></div>
+          <div id="avatar"><img src="images\image-avatar.png" height="45px" width="45px"></div>
+          <div id="cart"><img src="images\icon-cart.svg"></div>
         </nav>
         <div id="block">
-          <div id="image-product-1"><img src="C:\Users\h4z2w\Downloads\ecommerce-product-page-main\images\image-product-1.jpg" height="450px" width="450px"></div>
+          <div class="image"><img src="images\image-product-1.jpg" height="450px" width="450px"></div>
             <section>
               <p style="font-size: 15px; line-height: 0px; color: hsl(26, 100%, 55%); font-weight: bold; float: left;">SNEAKER COMPANY</p>
               <p style="font-size: 40px; line-height: 35px; font-weight: bold;">Fall Limited Edition<br>Sneakers</p>
@@ -39,11 +39,27 @@
               </div>
             </section>
         </div>
-        <div class="thumbnails">
-          <div class="thumbnail"><img src="C:\Users\h4z2w\Downloads\ecommerce-product-page-main\images\image-product-1-thumbnail.jpg" height="100px" width="100px"></div>
-          <div class="thumbnail"><img src="C:\Users\h4z2w\Downloads\ecommerce-product-page-main\images\image-product-2-thumbnail.jpg" height="100px" width="100px"></div>
-          <div class="thumbnail"><img src="C:\Users\h4z2w\Downloads\ecommerce-product-page-main\images\image-product-3-thumbnail.jpg" height="100px" width="100px"></div>
-          <div class="thumbnail"><img src="C:\Users\h4z2w\Downloads\ecommerce-product-page-main\images\image-product-4-thumbnail.jpg" height="100px" width="100px"></div>
+        <div class="column">
+          <div class="row">
+            <a href="images\image-product-1.jpg">
+              <img src="images\image-product-1-thumbnail.jpg" height="100px" width="100px">
+            </a>
+          </div>
+          <div class="row">
+            <a href="images\image-product-2.jpg">
+              <img src="images\image-product-2-thumbnail.jpg" height="100px" width="100px">
+            </a>
+          </div>
+          <div class="row">
+            <a href="images\image-product-3.jpg">
+              <img src="images\image-product-3-thumbnail.jpg" height="100px" width="100px">
+            </a>
+          </div>
+          <div class="row">
+            <a href="images\image-product-4.jpg">
+              <img src="images\image-product-4-thumbnail.jpg" height="100px" width="100px">
+            </a>
+          </div>
         </div>
       </div>
     </div>
