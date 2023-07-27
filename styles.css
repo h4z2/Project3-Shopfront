@@ -127,3 +127,39 @@ img
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
 }
+button#addcart
+{
+    background-color: hsl(26, 100%, 55%);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    width: 200px;
+}
+button#minus
+{
+    background-color: hsl(26, 100%, 55%);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+button#plus
+{
+    background-color: hsl(26, 100%, 55%);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+#quantity
+{
+    background-color: hsl(26, 100%, 55%);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    width: 50px;
+}

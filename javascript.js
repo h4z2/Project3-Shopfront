@@ -1,11 +1,11 @@
 const minusButton = document.getElementById("minus");
 const plusButton = document.getElementById("plus");
-const quantitySpan = document.getElementById("quantity");
+const quantityDiv = document.getElementById("quantity");
 const addToCartButton = document.getElementById("addcart");
 
 let quantity = 1;
 
-function updateQuantity() {quantitySpan.textContent = quantity.toString(); }
+function updateQuantity() {quantityDiv.textContent = quantity.toString(); }
 
 minusButton.addEventListener("click", function () {
 if (quantity > 1) {
@@ -31,3 +31,4 @@ quantity = 1;
 updateQuantity();
 console.log(cartItems); }
 });
+
