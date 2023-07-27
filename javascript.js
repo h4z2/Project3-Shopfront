@@ -24,6 +24,8 @@ const minusButton = document.getElementById("minus");
       updateQuantity();
     });
 
+    let cartItems = [];
+
     // Function to handle "Add to Cart" button click
     addToCartButton.addEventListener("click", function () {
       if (quantity > 0) {
