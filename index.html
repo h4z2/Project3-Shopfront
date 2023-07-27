@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" type="text/css" href="styles-script\styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <script src="styles-script\javascript.js" src="styles-script\lightbox.js"></script>
+    <script src="javascript.js"></script>
     <div id="window">
       <div id="padding">
         <nav>
@@ -32,8 +32,9 @@
 
               <p style="font-size: 20px; font-weight: bold;">$125.00</p>
               <p style="font-size: 15px; color: hsl(220, 14%, 75%);"><s>$250.00</s></p>
-              <div class="quantity">
+              <div>
                 <button id="minus">-</button>
+                <span id="quantity">1</span>
                 <button id="plus">+</button>
                 <button id="addcart">Add to Cart</button>
               </div>
