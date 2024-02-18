@@ -1,0 +1,22 @@
+section{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.navbar{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap')
