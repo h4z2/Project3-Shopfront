@@ -1,11 +1,9 @@
-section{
-    margin-top: 10%;
-    margin-bottom: 10%;
+body{
+    margin: 10%;
 }
 
-.navbar{
-    margin-left: 10%;
-    margin-right: 10%;
+@media (min-width: 1250px) {
+    /* … */
 }
 
 footer{
