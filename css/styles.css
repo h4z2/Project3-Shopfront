@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
 body{
-    margin: 10%;
+    margin: 5%;
+}
+
+button{
+    border: none;
+    background: none;
+    padding: none;
 }
 
 @media (min-width: 1250px) {
@@ -17,4 +25,3 @@ footer{
     display: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap')

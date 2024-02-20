@@ -28,9 +28,9 @@
       <!-- Toggled content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Collections button -->
+          <!-- Index button -->
           <li class="nav-item p-4">
-            <a class="nav-link" aria-current="page" href="collection.html">Collections</a>
+            <a class="nav-link" aria-current="page" href="#">Collections</a>
           </li>
           <!-- Men button -->
           <li class="nav-item p-4">
@@ -38,7 +38,7 @@
           </li>
           <!-- Women button -->
           <li class="nav-item p-4">
-            <a class="nav-link" href="about.html">Women</a>
+            <a class="nav-link" href="women.html">Women</a>
           </li>
           <!-- About button -->
           <li class="nav-item p-4">
@@ -82,47 +82,50 @@
         <div class="container text-centre">
           <div class="row row-cols-4 container-fluid">
             <div class="col p-3">
-              <img src="images\image-product-1-thumbnail.jpg" class="img-fluid rounded-5" alt="stackedshoes">
+              <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1">
+                <img src="images\image-product-1-thumbnail.jpg" class="img-fluid rounded-5" alt="stackedshoes"></button>
             </div>
             <div class="col p-3">
-              <img src="images\image-product-2-thumbnail.jpg" class="img-fluid rounded-5" alt="shoeandsticks">
+              <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2">
+                <img src="images\image-product-2-thumbnail.jpg" class="img-fluid rounded-5"
+                  alt="shoeandsticks"></button>
             </div>
             <div class="col p-3">
-              <img src="images\image-product-3-thumbnail.jpg" class="img-fluid rounded-5" alt="shoeonrocks">
+              <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3">
+                <img src="images\image-product-3-thumbnail.jpg" class="img-fluid rounded-5" alt="shoeonrocks"></button>
             </div>
             <div class="col p-3">
-              <img src="images\image-product-4-thumbnail.jpg" class="img-fluid rounded-5" alt="shoeonrockssideways">
+              <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4">
+                <img src="images\image-product-4-thumbnail.jpg" class="img-fluid rounded-5"
+                  alt="shoeonrockssideways"></button>
             </div>
           </div>
         </div>
       </div>
-      <div class="container col">
-        <div class="row gx-5">
-          <div class="col">
-            <h5 class="lead">Sneaker Company</h5>
-            <h1 class="display-6"><strong>Fall Limited Edition Sneakers</strong></h1>
-            <medium class="text-muted">These low-profile sneakers are your perfect casual wear companion. Featuring a
-              durable rubber outer sole, they’ll withstand everything the weather can offer.</medium>
+      <div class="container col p-5 m-5">
+        <h5 class="lead pb-3">Sneaker Company</h5>
+        <h1 class="pb-4"><strong>Fall Limited Edition Sneakers</strong></h1>
+        <div class="pb-4">
+          <medium class="text-muted">These low-profile sneakers are your perfect casual wear companion. Featuring a
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</medium>
+        </div>
+        <div class="pb-5">
+          <h2><strong>$125.00
+              <small>50%</small></strong>
+          </h2>
+          <h4 class="col"><del class="text-muted">$250.00</del></h4>
+        </div>
+        <div class="row-cols-3">
+          <div class="btn-group col" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">+</button>
+            <button type="button" class="btn btn-primary">#</button>
+            <button type="button" class="btn btn-primary">-</button>
           </div>
+          <button type="button" class="btn btn-primary col">Add to cart</button>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="row pt-4">
-              <h2 class="col">$125.00</h2>
-              <h4 class="col">50%</h4>
-            </div>
-            <div class="row">
-              <h2 class="col"><del class="text-muted">$250.00</del></h2>
-            </div>
-          </div>
-        </div>
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-primary">+</button>
-          <button type="button" class="btn btn-primary">#</button>
-          <button type="button" class="btn btn-primary">-</button>
-        </div>
-        <button type="button" class="btn btn-primary">Add to cart</button>
       </div>
+    </div>
     </div>
   </section>
   <!-- Footer -->
