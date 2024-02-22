@@ -49,51 +49,51 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
-function addToCartClicked(event) {
-    var button = event.target
+function addToCartClicked(button) {
     var shopItem = button.parentElement.parentElement
+    var titleElement = shopItem.querySelector('.shop-item-title')
+    var title = titleElement ? titleElement.innerText : ''
+    var priceElement = shopItem.querySelector('.shop-item-price')
+    var price = priceElement ? priceElement.innerText : ''
+    var quantityInput = shopItem.querySelector('.cart-quantity-input')
+    var quantity = quantityInput ? quantityInput.value : 1
+    document.getElementById.remove.classList("hide")
 
-// Log information for debugging
-console.log("shopItem:", shopItem);
-
-var titleElement = shopItem.getElementsByClassName('shop-item-title')[0];
-    if (!titleElement) {
-        console.error("Title element not found");
-        return;
-    }
-
-    var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    addItemToCart(title, price, imageSrc)
+    addItemToCart(title, price, quantity)
     updateCartTotal()
 }
 
-function addItemToCart(title, price, imageSrc) {
+function addItemToCart(title, price, quantity) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
+
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
             alert('This item is already added to the cart')
             return
         }
     }
+
     var cartRowContents = `
         <div class="cart-item cart-column">
-            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
-        </div>
-        <span class="cart-price cart-column">${price}</span>
-        <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1">
-            <button class="btn btn-danger" type="button">REMOVE</button>
+            <span class="cart-price">${price}</span>
+            <div class="cart-quantity">
+                <span class="cart-quantity-value">${quantity}</span>
+                <button class="btn btn-danger" type="button">Remove</button>
+            </div>
         </div>`
+
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
+
+    var quantityInput = cartRow.querySelector('.cart-quantity-input')
+    updateQuantityButtons(quantityInput)
+
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
-    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
 function updateCartTotal() {
@@ -103,11 +103,52 @@ function updateCartTotal() {
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        var price = parseFloat(priceElement.innerText.replace('$', ''))
-        var quantity = quantityElement.value
-        total = total + (price * quantity)
+        var quantityElement = cartRow.querySelector('.cart-quantity .cart-quantity-value')
+
+        if (priceElement && quantityElement) {
+            var price = parseFloat(priceElement.innerText.replace('$', ''))
+            var quantity = parseInt(quantityElement.innerText) || 1
+            total += price * quantity
+        }
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+
+
+var quantityButtons = document.querySelectorAll('.quantity-btn')
+quantityButtons.forEach(function (button) {
+    button.addEventListener('click', quantityButtonClicked)
+})
+
+function quantityButtonClicked(event) {
+    var button = event.target
+    var input = button.parentElement.querySelector('.cart-quantity-input')
+    var currentValue = parseInt(input.value)
+
+    if (button.dataset.action === 'increment') {
+        input.value = currentValue + 1
+    } else if (button.dataset.action === 'decrement' && currentValue > 1) {
+        input.value = currentValue - 1
+    }
+    updateCartTotal()
+}
+
+function updateQuantityButtons(input) {
+    if (input) {
+        var decrementButton = input.parentElement.querySelector('[data-action="decrement"]')
+        var incrementButton = input.parentElement.querySelector('[data-action="increment"]')
+
+        decrementButton.addEventListener('click', function () {
+            var currentValue = parseInt(input.value)
+            if (currentValue > 1) {
+                input.value = currentValue - 1
+            }
+        })
+
+        incrementButton.addEventListener('click', function () {
+            var currentValue = parseInt(input.value)
+            input.value = currentValue + 1
+        })
+    }
 }
