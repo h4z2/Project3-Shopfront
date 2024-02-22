@@ -4,6 +4,8 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+const checkoutButton = document.getElementsByClassName("")
+
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -49,16 +51,24 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 
-function addToCartClicked(button) {
-    var shopItem = button.parentElement.parentElement
+function addToCartClicked(event) {
+    var button = event.target
+    var shopItem = button.closest('.shop-item')
     var titleElement = shopItem.querySelector('.shop-item-title')
-    var title = titleElement ? titleElement.innerText : ''
     var priceElement = shopItem.querySelector('.shop-item-price')
-    var price = priceElement ? priceElement.innerText : ''
-    var quantityInput = shopItem.querySelector('.cart-quantity-input')
-    var quantity = quantityInput ? quantityInput.value : 1
-    document.getElementById.remove.classList("hide")
-
+    var quantityElement = shopItem.querySelector('.cart-quantity-input')
+    var title
+    if (titleElement) {
+        title = titleElement.innerText
+    } else {
+        console.error('Title element not found.')
+        return
+    }
+    var price = priceElement ? priceElement.innerText : 'Not found'
+    var quantity = quantityElement ? quantityElement.value : 'Not found'
+    console.log('Title:', title)
+    console.log('Price:', price)
+    console.log('Quantity:', quantity)
     addItemToCart(title, price, quantity)
     updateCartTotal()
 }
@@ -83,7 +93,7 @@ function addItemToCart(title, price, quantity) {
             <span class="cart-price">${price}</span>
             <div class="cart-quantity">
                 <span class="cart-quantity-value">${quantity}</span>
-                <button class="btn btn-danger" type="button">Remove</button>
+                <button class="btn btn-danger" type="button"><img scr="images\icon-delete.svg"></button>
             </div>
         </div>`
 
