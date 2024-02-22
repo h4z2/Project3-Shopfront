@@ -48,6 +48,31 @@
           <li class="nav-item p-4">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
+          <!-- Shopping Cart -->
+          <li class="nav-item p-4">
+            <button type="button" class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+              aria-expanded="false" aria-controls="collapseExample">
+              Cart <span class="badge text-bg-secondary">4</span>
+            </button>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                <section class="container content-section">
+                  <div class="cart-row">
+                    <span class="cart-item cart-header cart-column"></span>
+                    <span class="cart-price cart-header cart-column"></span>
+                    <span class="cart-quantity cart-header cart-column"></span>
+                  </div>
+                  <div class="cart-items">
+                  </div>
+                  <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                  </div>
+                  <button class="btn btn-primary btn-purchase" type="button">Checkout</button>
+                </section>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -84,34 +109,36 @@
             <div class="col p-3">
               <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1">
-                <img src="images\image-product-1-thumbnail.jpg" class="img-fluid rounded-5" alt="stackedshoes"></button>
+                <img src="images\image-product-1-thumbnail.jpg" class="img-fluid rounded-3" alt="stackedshoes"></button>
             </div>
             <div class="col p-3">
               <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2">
-                <img src="images\image-product-2-thumbnail.jpg" class="img-fluid rounded-5"
+                <img src="images\image-product-2-thumbnail.jpg" class="img-fluid rounded-3"
                   alt="shoeandsticks"></button>
             </div>
             <div class="col p-3">
               <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3">
-                <img src="images\image-product-3-thumbnail.jpg" class="img-fluid rounded-5" alt="shoeonrocks"></button>
+                <img src="images\image-product-3-thumbnail.jpg" class="img-fluid rounded-3" alt="shoeonrocks"></button>
             </div>
             <div class="col p-3">
               <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4">
-                <img src="images\image-product-4-thumbnail.jpg" class="img-fluid rounded-5"
+                <img src="images\image-product-4-thumbnail.jpg" class="img-fluid rounded-3"
                   alt="shoeonrockssideways"></button>
             </div>
           </div>
         </div>
       </div>
       <div class="container col p-5 m-5">
-        <h5 class="lead pb-3">Sneaker Company</h5>
-        <h1 class="pb-4"><strong>Fall Limited Edition Sneakers</strong></h1>
-        <div class="pb-4">
-          <medium class="text-muted">These low-profile sneakers are your perfect casual wear companion. Featuring a
-            durable rubber outer sole, they’ll withstand everything the weather can offer.</medium>
+        <div>
+          <h5 class="lead pb-3">Sneaker Company</h5>
+          <h1 class="pb-4"><strong><span>Limited Edition Sneakers</span></strong></h1>
+          <div class="pb-4">
+            <medium class="text-muted">These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.</medium>
+          </div>
         </div>
         <div class="pb-5">
-          <h2><strong>$125.00
+          <h2><strong><span>$125.00</span>
               <small>50%</small></strong>
           </h2>
           <h4 class="col"><del class="text-muted">$250.00</del></h4>
@@ -119,13 +146,33 @@
         <div class="row-cols-3">
           <div class="btn-group col" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-primary">+</button>
-            <button type="button" class="btn btn-primary">#</button>
+            <button type="button" class="btn btn-secondary">0</button>
             <button type="button" class="btn btn-primary">-</button>
           </div>
-          <button type="button" class="btn btn-primary col">Add to cart</button>
+          <button type="button" class="btn btn-success col">Add to cart</button>
         </div>
       </div>
     </div>
+    </div>
+  </section>
+  <section class="container content-section">
+    <h2 class="lead pb-3">Sneaker Company</h2>
+    <div class="shop-items">
+      <div class="shop-item">
+        <h1><strong><span class="shop-item-title">Limited Edition Sneakers</span></strong></h1>
+        <img class="shop-item-image" src="images\image-product-1-thumbnail.jpg">
+        <div class="shop-item-details">
+          <div class="pb-4">
+            <medium class="text-muted">These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.</medium>
+          </div>
+          <span class="shop-item-price">
+            <h2><strong>$125.00
+          </span><small>50%</small></strong></h2>
+          <h4><del class="text-muted">$250.00</del></h4>
+          <button class="btn btn-primary shop-item-button" type="button">Add to cart</button>
+        </div>
+      </div>
     </div>
   </section>
   <!-- Footer -->
