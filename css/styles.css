@@ -1,27 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
-body{
+body {
     margin: 5%;
 }
 
-button{
+button {
     border: none;
     background: none;
     padding: none;
 }
 
-@media (min-width: 1250px) {
-    /* … */
-}
-
-footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     text-align: center;
 }
 
-.hide{
-    display: none;
+
+
+@media (min-width: 1250px) {
+    #navbarSupportedContent {
+        display: none;
+    }
+
+    .btn-close{
+        display: none;
+    }
 }
 
+@media (max-width: 1250px) {
+    #navbarSupportedContent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background-color: white;
+        width: 75%;
+        height: 100%;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+#collapseExample {
+    position: fixed;
+    z-index: 1000;
+}
+
+.cart-item {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-title {
+    align-items: center;
+    float: left;
+}
+
+.cart-price {
+    margin-right: 10px;
+    float: left;
+}
+
+.cart-quantity {
+    align-items: center;
+    float: left;
+}
+
+.cart-quantity-value {
+    margin: 0 5px;
+    float: left;
+}
+
+.btn-outline-danger {
+    float: right;
+}
