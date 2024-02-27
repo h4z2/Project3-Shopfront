@@ -44,14 +44,14 @@ footer {
     }
 }
 
-@media (min-width: 1250px) {
+@media (max-width: 1250px) {
     .thumbnail-btn {
-        
+        display: none;
     }
 }
 
-@media (max-width: 1250px) {
-    .thumbnail-btn {
+@media (min-width: 1250px) {
+    .nav-collapse {
         display: none;
     }
 }
@@ -94,6 +94,10 @@ footer {
     color: hsl(26, 100%, 55%);
 }
 
+.lgt-orange-fill {
+    background-color: hsl(25, 100%, 94%);
+}
+
 .orange-fill {
     background-color: hsl(26, 100%, 55%);
 }
@@ -101,6 +105,7 @@ footer {
 .btn-primary {
     border: hsl(223, 64%, 98%);
     --bs-btn-hover-bg: hsl(25, 100%, 70%)
+    --bs-btn-active-bg: hsl(26, 100%, 55%);
 }
 
 .btn {
@@ -117,5 +122,28 @@ footer {
 }
 
 .grey-fill {
-    background-color: hsl(220, 14%, 75%);
+    background-color: hsl(223, 64%, 98%)
+}
+
+.thumbnail-btn:hover {
+    opacity: 55%;
+}
+
+.nav-item:hover {
+    border-bottom: solid hsl(26, 100%, 55%);
+}
+
+#discount {
+    border-radius: 10%;
+    float: left;
+}
+
+#price {
+    float: left;
+}
+
+@media (max-width: 1250px) {
+    #carouselExampleControls {
+        width: fit-content;
+    }
 }

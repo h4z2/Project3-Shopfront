@@ -28,7 +28,7 @@
       <!-- Toggled content -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item p-4">
+          <li class="nav-item p-4 nav-collapse">
             <button type="button" class="btn-close" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Close">
             </button>
@@ -65,7 +65,7 @@
             </button>
             <div class="collapse" id="collapseExample">
               <div class="card card-body">
-                <section class="container content-section">
+                <div class="container content-section">
                   <div class="cart-row">
                     <span class="cart-item"></span>
                     <span class="cart-price"></span>
@@ -79,7 +79,7 @@
                     <span class="cart-total-price"></span>
                   </div>
                   <button class="btn btn-primary btn-purchase container orange-fill" type="button">Checkout</button>
-                </section>
+                </div>
               </div>
             </div>
           </li>
@@ -140,30 +140,32 @@
         </div>
       </div>
       <!-- Shop item -->
-      <section class="container content-section col p-5 m-5">
+      <div class="container content-section col p-5 m-5">
         <h2 class="lead pb-3 orange">Sneaker Company</h2>
         <div class="shop-items">
           <div class="shop-item">
             <h1><strong><span class="shop-item-title">Fall Limited Edition Sneakers</span></strong></h1>
             <div class="shop-item-details">
               <medium class="text-muted">These low-profile sneakers are your perfect casual wear companion.
-                Featuring
-                a durable rubber outer sole, they’ll withstand everything the weather can offer.</medium>
+                Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</medium>
+              </br></br>
               <span class="shop-item-price">
-                <h2><strong>$125.00</strong></h2>
+                <h2 id="price"><strong>$125.00</strong></h2>
               </span>
-              <h2><strong><small>50%</small></strong></h2>
+              <h2 class="orange lgt-orange-fill col" id="discount"><strong><small>50%</small></strong></h2></br></br>
               <h4><del class="text-muted">$250.00</del></h4>
               <div class="container row text-centre" role="group">
-                <button type="button" class="btn btn-outline-secondary quantity-btn col grey-fill" data-action="decrement">-</button>
+                <button type="button" class="btn btn-outline-secondary quantity-btn col grey-fill"
+                  data-action="decrement">-</button>
                 <input class="cart-quantity-input form-control col grey-fill" type="number" value="1" readonly></input>
-                <button type="button" class="btn btn-outline-secondary quantity-btn col grey-fill" data-action="increment">+</button>
+                <button type="button" class="btn btn-outline-secondary quantity-btn col grey-fill"
+                  data-action="increment">+</button>
                 <button class="btn btn-primary shop-item-button col orange-fill" type="button">Add to cart</button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
     </div>
   </section>
