@@ -2,6 +2,7 @@
 
 body {
     margin: 5%;
+    font-family: Kumbh Sans
 }
 
 button {
@@ -16,8 +17,6 @@ footer {
     bottom: 0;
     text-align: center;
 }
-
-
 
 @media (min-width: 1250px) {
     #navbarSupportedContent {
@@ -41,6 +40,18 @@ footer {
     }
 
     .hide {
+        display: none;
+    }
+}
+
+@media (min-width: 1250px) {
+    .thumbnail-btn {
+        
+    }
+}
+
+@media (max-width: 1250px) {
+    .thumbnail-btn {
         display: none;
     }
 }
@@ -77,4 +88,34 @@ footer {
 
 .btn-outline-danger {
     float: right;
+}
+
+.orange {
+    color: hsl(26, 100%, 55%);
+}
+
+.orange-fill {
+    background-color: hsl(26, 100%, 55%);
+}
+
+.btn-primary {
+    border: hsl(223, 64%, 98%);
+    --bs-btn-hover-bg: hsl(25, 100%, 70%)
+}
+
+.btn {
+    border: hsl(223, 64%, 98%);
+}
+
+.cart-quantity-input:hover {
+    cursor: default;
+}
+
+.cart-quantity-input {
+    border: hsl(223, 64%, 98%);
+    text-align: center;
+}
+
+.grey-fill {
+    background-color: hsl(220, 14%, 75%);
 }
