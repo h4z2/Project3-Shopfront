@@ -213,7 +213,6 @@ function currentSlide(n) {
 }
 // end of code taken from https://www.w3schools.com/howto/howto_js_lightbox.asp
 
-// Function to hide carousel buttons
 function hideCarouselButtons() {
     var prevButton = document.getElementById("prevButton")
     var nextButton = document.getElementById("nextButton")
@@ -224,7 +223,6 @@ function hideCarouselButtons() {
     }
 }
 
-// Function to show carousel buttons
 function showCarouselButtons() {
     var prevButton = document.getElementById("prevButton")
     var nextButton = document.getElementById("nextButton")
