@@ -178,3 +178,60 @@ function updateQuantityButtons(input) {
     }
 }
 
+// code taken from https://www.w3schools.com/howto/howto_js_lightbox.asp
+// Open the Modal
+function openModal() {
+    document.getElementById("myModal").style.display = "block"
+    hideCarouselButtons()
+}
+
+// Close the Modal
+function closeModal() {
+    document.getElementById("myModal").style.display = "none"
+    showCarouselButtons()
+}
+
+var slideIndex = 1
+showSlides(slideIndex)
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides")
+    var captionText = document.getElementById("caption")
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"
+        }
+
+    slides[slideIndex - 1].style.display = "block"
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n)
+}
+// end of code taken from https://www.w3schools.com/howto/howto_js_lightbox.asp
+
+// Function to hide carousel buttons
+function hideCarouselButtons() {
+    var prevButton = document.getElementById("prevButton")
+    var nextButton = document.getElementById("nextButton")
+
+    if (prevButton && nextButton) {
+        prevButton.style.display = "none"
+        nextButton.style.display = "none"
+    }
+}
+
+// Function to show carousel buttons
+function showCarouselButtons() {
+    var prevButton = document.getElementById("prevButton");
+    var nextButton = document.getElementById("nextButton");
+
+    if (prevButton && nextButton) {
+        prevButton.style.display = "block";
+        nextButton.style.display = "block";
+    }
+}
