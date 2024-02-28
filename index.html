@@ -15,8 +15,8 @@
 </head>
 
 <body>
-  <img src="images\SL-030722-49030-30.jpg" class="background">
-  <section class="p-5 shadow-lg">
+  <img src="images\SL-030722-49030-30.jpg" id="background">
+  <section class="p-5 shadow-lg container-md">
     <!-- Navigation panel -->
     <nav class="navbar navbar-expand-lg border-bottom">
       <div class="nav container">
@@ -89,10 +89,10 @@
         </div>
       </div>
     </nav>
-    <div class="container pt-5 px-4">
-      <div class="row gx-5">
+    <div class="container pt-5">
+      <div class="row row-cols-2 carousel-query">
         <!-- Carousel element -->
-        <div id="carouselExampleControls" class="carousel slide col" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="images\image-product-1.jpg" onclick="openModal();currentSlide(1)"
@@ -140,27 +140,27 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-          <div class="container text-centre">
-            <div class="row row-cols-4 container-fluid">
-              <div class="col p-3 thumbnail-btn">
+          <div class="container mt-4">
+            <div class="row row-cols-4 container p-0">
+              <div class="thumbnail-btn p-0">
                 <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
                   aria-current="true" aria-label="Slide 1">
                   <img src="images\image-product-1-thumbnail.jpg" class="img-fluid rounded-3"
                     alt="stackedshoes"></button>
               </div>
-              <div class="col p-3 thumbnail-btn">
+              <div class="thumbnail-btn p-0">
                 <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1"
                   aria-label="Slide 2">
                   <img src="images\image-product-2-thumbnail.jpg" class="img-fluid rounded-3"
                     alt="shoeandsticks"></button>
               </div>
-              <div class="col p-3 thumbnail-btn">
+              <div class="thumbnail-btn p-0">
                 <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2"
                   aria-label="Slide 3">
                   <img src="images\image-product-3-thumbnail.jpg" class="img-fluid rounded-3"
                     alt="shoeonrocks"></button>
               </div>
-              <div class="col p-3 thumbnail-btn">
+              <div class="thumbnail-btn p-0">
                 <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3"
                   aria-label="Slide 4">
                   <img src="images\image-product-4-thumbnail.jpg" class="img-fluid rounded-3"
@@ -170,7 +170,7 @@
           </div>
         </div>
         <!-- Shop item -->
-        <div class="container content-section col p-5 m-5">
+        <div class="content-section">
           <h2 class="lead pb-3 orange">Sneaker Company</h2>
           <div class="shop-items">
             <div class="shop-item">
