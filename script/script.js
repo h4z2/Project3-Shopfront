@@ -113,31 +113,30 @@ function addItemToCart(title, price, quantity) {
 }
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row');
-    var total = 0;
-    var itemCount = 0; // Initialize item count
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var total = 0
+    var itemCount = 0
 
     for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.querySelector('.cart-price');
-        var quantityElement = cartRow.querySelector('.cart-quantity-value');
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.querySelector('.cart-price')
+        var quantityElement = cartRow.querySelector('.cart-quantity-value')
 
         if (priceElement && quantityElement) {
-            var price = parseFloat(priceElement.innerText.replace('$', ''));
-            var quantity = parseInt(quantityElement.innerText) || 1;
-            total += price * quantity;
-            itemCount += quantity; // Update item count
+            var price = parseFloat(priceElement.innerText.replace('$', ''))
+            var quantity = parseInt(quantityElement.innerText) || 1
+            total += price * quantity
+            itemCount += quantity
         }
     }
 
-    total = Math.round(total * 100) / 100;
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
+    total = Math.round(total * 100) / 100
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 
-    // Update badge with item count
-    var badge = document.querySelector('.badge');
+    var badge = document.querySelector('.badge')
     if (badge) {
-        badge.innerText = itemCount;
+        badge.innerText = itemCount
     }
 }
 
@@ -227,11 +226,11 @@ function hideCarouselButtons() {
 
 // Function to show carousel buttons
 function showCarouselButtons() {
-    var prevButton = document.getElementById("prevButton");
-    var nextButton = document.getElementById("nextButton");
+    var prevButton = document.getElementById("prevButton")
+    var nextButton = document.getElementById("nextButton")
 
     if (prevButton && nextButton) {
-        prevButton.style.display = "block";
-        nextButton.style.display = "block";
+        prevButton.style.display = "block"
+        nextButton.style.display = "block"
     }
 }
