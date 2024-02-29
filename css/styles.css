@@ -67,21 +67,6 @@ footer {
     margin-bottom: 10px;
 }
 
-.cart-item-title {
-    align-items: center;
-    float: left;
-}
-
-.cart-price {
-    margin-right: 10px;
-    float: left;
-}
-
-.cart-quantity {
-    align-items: center;
-    float: left;
-}
-
 .cart-quantity-value {
     margin: 0 5px;
     float: left;
@@ -101,11 +86,8 @@ footer {
 
 .orange-fill {
     background-color: hsl(26, 100%, 55%);
-}
-
-.btn-primary {
-    border: hsl(223, 64%, 98%);
-    --bs-btn-hover-bg: hsl(25, 100%, 70%) --bs-btn-active-bg: hsl(26, 100%, 55%);
+    --bs-btn-hover-bg: hsl(25, 100%, 94%);
+    --bs-btn-active-bg: hsl(25, 100%, 94%);
 }
 
 .btn {
@@ -119,10 +101,13 @@ footer {
 .cart-quantity-input {
     border: hsl(223, 64%, 98%);
     text-align: center;
+    width: 16%;
 }
 
 .grey-fill {
-    background-color: hsl(223, 64%, 98%)
+    background-color: hsl(223, 64%, 98%);
+    --bs-btn-hover-bg: hsl(25, 100%, 94%);
+    --bs-btn-active-bg: hsl(25, 100%, 94%);
 }
 
 .thumbnail-btn:hover {
@@ -136,6 +121,8 @@ footer {
 #discount {
     border-radius: 10%;
     float: left;
+    margin-left: 5%;
+    padding: 1%;
 }
 
 #price {
@@ -150,12 +137,8 @@ footer {
 @media (max-width: 1250px) {
     #carouselExampleControls {
         width: fit-content;
-    }
-}
-
-@media (max-width: 1250px) {
-    .content-section {
-        width: 100%;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -186,8 +169,257 @@ section {
     }
 }
 
-.navbar-brand {
-    font-weight: bolder;
+@media (max-width: 1250px) {
+    .page-style {
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-bottom: 20%;
+    }
+}
+
+@media (min-width: 1250px) {
+    .page-style {
+        padding-left: 12%;
+        padding-right: 12%;
+        padding-bottom: 10%;
+    }
+}
+
+.nav-position {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+}
+
+.nav-style {
+    padding-bottom: 2%;
+}
+
+@media (max-width: 1250px) {
+    .img-avatar {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .img-avatar {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .brand-name {
+        padding-right: 0%;
+        float: left;
+    }
+}
+
+.brand-name {
+    font-weight: 1000;
+    padding-right: 3%;
+    display: inline-block;
+}
+
+@media (min-width: 1250px) {
+    .cart-style {
+        padding-right: 5%;
+    }
+}
+
+@media (min-width: 1250px) {
+    .shop-style {
+        padding-left: 10%;
+        padding-top: 5%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .shop-style {
+        width: 100%;
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+.shop-item-title {
+    font-weight: 1000;
+}
+
+.shop-item-details {
+    padding-top: 5%;
+}
+
+.og-price {
+    color: hsl(220, 14%, 75%);
+    padding-bottom: 5%;
+}
+
+@media (max-width: 1250px) {
+    .shop-item-price {
+        float: left;
+    }
+}
+
+@media (max-width: 1250px) {
+    #discount {
+        float: left;
+    }
+}
+
+.btn-group {
+    float: left;
+    width: 45%;
+}
+
+.shop-btn {
+    float: left;
+    width: 55%;
+}
+
+@media (max-width: 1250px) {
+    .btn-group {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .shop-btn {
+        width: 100%;
+    }
+}
+
+.thumbnail-btn {
+    width: 25%;
+    float: left;
+    padding-top: 5%;
+}
+
+.img-fluid {
+    width: 80%;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.quantity-btn {
+    width: 16%;
+    padding: 3%;
+}
+
+.shop-item-button {
+    width: 52%;
+    color: white;
+    padding: 3%;
+}
+
+@media (max-width: 1250px) {
+    .quantity-btn {
+        width: 42%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .shop-item-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .section-style {
+        left: 0;
+        top: 0;
+        position: fixed;
+    }
+}
+
+@media (max-width: 1250px) {
+    .nav-position {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1250px) {
+    .inner-page-position {
+        position: fixed;
+        left: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1250px) {
+    .page-position {
+        padding-top: 8%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .carousel-item {
+        max-width: fit-content;
+    }
+}
+
+@media (max-width: 1250px) {
+    .navbar-collapse {
+        font-weight: bold;
+        font-size: larger;
+        padding: 5%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .btn-close {
+        padding-bottom: 30%;
+    }
+}
+
+@media (max-width: 1250px) {
+    #collapseExample {
+        width: 95%;
+        left: 2.5%;
+    }
+}
+
+.btn-purchase {
+    color: white;
+}
+
+.card-body {
+    width: 100%;
+}
+
+.cart-items {
+    padding-bottom: 5%;
+}
+
+.cart-item-title {
+    align-items: center;
+    float: left;
+}
+
+.cart-price {
+    margin-right: 10px;
+    float: left;
+}
+
+.cart-quantity {
+    align-items: center;
+}
+
+.cart-total {
+    width: 100%;
+}
+
+.cart-total-title {
+    float: left;
+}
+
+.cart-total-price {
+    float: left;
 }
 
 /* code taken from https://www.w3schools.com/howto/howto_js_lightbox.asp */

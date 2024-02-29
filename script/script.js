@@ -94,7 +94,7 @@ function addItemToCart(title, price, quantity) {
         <div class="cart-item">
             <span class="cart-item-title">${title}</span>
             <div class="cart-quantity col">
-                <span class="cart-price">${price} x</span>
+                <span class="cart-price">${price}x</span>
                 <span class="cart-quantity-value">${quantity}</span>
             </div>
             <button class="btn btn-outline-danger" type="button">
