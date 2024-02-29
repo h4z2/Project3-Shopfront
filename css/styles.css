@@ -186,6 +186,10 @@ section {
     }
 }
 
+.navbar-brand {
+    font-weight: bolder;
+}
+
 /* code taken from https://www.w3schools.com/howto/howto_js_lightbox.asp */
 /* The Modal (background) */
 .modal {
